@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A Coding Project By Jozef Csörgei</title>
+    <title>Palindrome Checker: A Coding Project By Jozef Csörgei</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,8 +22,8 @@
     <!-- ==== Nav Section ==== -->
     <nav class="navbar navbar-expand-md navbar-dark fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#"><img src="img/logo_light.svg"
-                    class="d-inline-block align-text-top" width="24" height="24"> APP NAME</a>
+            <a class="navbar-brand" href="#"><img src="img/logo_light.svg" class="d-inline-block align-text-top"
+                    width="24" height="24"> Palindrome Checker</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
                 aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -51,8 +51,29 @@
     </nav>
     <!-- ==== Main Section ==== -->
     <main class="flex-shrink-0">
-        <div class="container">
-
+        <div class="container mt-5">
+            <div class="row row-cols-1 row-cols-lg-2">
+                <div class="col border-2 border-end">
+                    <h1 class="display-5 fw-bold">Palindrome Checker</h1>
+                    <p class="lead"> A palindrome is a word, phrase, or sequence that reads the same backward as
+                        forward. Write a program that checks if the phrase entered is a palindrome.
+                    </p>
+                    <h2 class="border-2 border-top pt-2">Instructions</h2>
+                    <p>Enter the word you want to check to the input field and press the button. An alert box will
+                        appear telling whether the entered word is a palindrome or not.</p>
+                </div>
+                <div class="col">
+                    <form>
+                        <h4>Enter a phrase or word to check</h4>
+                        <input type="text" id="inputString" class="form-control">
+                        <button type="button" class="btn-dark btn-lg mt-2" id="submitBtn">Check It</button>
+                    </form>
+                    <div id="alert" class="alert fade show alert-secondary mt-5 invisible">
+                        <h4 id="alertHeading" class="alert-heading"></h4>
+                        <p id="msg"></p>
+                    </div>
+                </div>
+            </div>
         </div>
     </main>
     <!-- ==== Footer Section ==== -->
@@ -67,11 +88,15 @@
                 </div>
                 <div class="col d-flex align-items-center justify-content-start justify-content-lg-end">
                     <div class="row">
-                        <div class="col social"><a target="_blank" href="https://www.linkedin.com/in/jozef-cs%C3%B6rgei-659347217/"><i class="fab fa-linkedin fa-2x"></i></a>
+                        <div class="col social"><a target="_blank"
+                                href="https://www.linkedin.com/in/jozef-cs%C3%B6rgei-659347217/"><i
+                                    class="fab fa-linkedin fa-2x"></i></a>
                         </div>
-                        <div class="col social"><a target="_blank" href="https://github.com/jcsorgei"><i class="fab fa-github fa-2x"></i></a>
+                        <div class="col social"><a target="_blank" href="https://github.com/jcsorgei"><i
+                                    class="fab fa-github fa-2x"></i></a>
                         </div>
-                        <div class="col social"><a target="_blank" href="https://twitter.com/JCsorgei"><i class="fab fa-twitter fa-2x"></i></a>
+                        <div class="col social"><a target="_blank" href="https://twitter.com/JCsorgei"><i
+                                    class="fab fa-twitter fa-2x"></i></a>
                         </div>
                     </div>
                 </div>
@@ -86,6 +111,9 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
     </script>
     <script src="js/site.js"></script>
+    <script>
+        document.getElementById("submitBtn").addEventListener("click", getValue);
+    </script>
 </body>
 
 </html>
