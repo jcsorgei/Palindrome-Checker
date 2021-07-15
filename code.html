@@ -121,9 +121,18 @@
                     </pre>
                 </div>
                 <div class="col-lg-4">
-                    <p>The Code is structed in one function.</p>
-                    <h5>Hello World</h5>
-                    <p>Hello World is a function that displays an alert with a message of "Hello World"</p>
+                    <p>The Code consists of 4 functions</p>
+                    <h5>getValue</h5>
+                    <p>getValue is the entry point of the program. It get the user input and normalizes it. Then it passes the normalized input to <strong>checkPalindrome</strong>. Finally it displays the result. </p>
+
+                    <h5>normalize</h5>
+                    <p>The function normalizes the input strings - removes whitespaces, special/uppercase characters from it using regular expressions. It returns the normalized string</p>
+
+                    <h5>checkForPalindrome</h5>
+                    <p>The function checks the input string for palindrome. It returns an object with 2 properties: <br> <strong>reversed</strong>: contains the reversed string <br> <strong>msg</strong>: contains a message whether the input string is a palindrome or not.</p>
+                    
+                    <h5>displayResult</h5>
+                    <p>Takes a <strong>returnObj</strong> as a parameter and displays its properties in an alert.</p>
                 </div>
             </div>
         </div>
